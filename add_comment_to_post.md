@@ -67,5 +67,14 @@
  
 其他部分都和上面的方法一樣
 
+
+----------
+##**刪除**
+因為是nested routes所以刪除的網址長得像這樣
+/posts/:post_id/comments/:id(.:format)
+所以要把需要的post_id和comment id 傳過去
+
+    <%= link_to '刪除留言', post_comment_path(comment.post, comment), method: :delete, data: {confirm: "確定要刪除?"} %>
+
 > Written with [StackEdit](https://stackedit.io/).
 
