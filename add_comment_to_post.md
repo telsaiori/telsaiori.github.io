@@ -53,10 +53,19 @@
     end
 
 
+----------
+或者也可以用下面這種方法,
+在form_for指定送出後的url或是action
 
+    <%= form_for @comment, url: post_comments_path(@post) do |f| %>
 
+然後在post的show action增加
 
-
+      def show
+        @comment = Comment.new
+      end
+ 
+其他部分都和上面的方法一樣
 
 > Written with [StackEdit](https://stackedit.io/).
 
